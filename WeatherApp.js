@@ -4,7 +4,7 @@ import { get } from './mockBackend/fetch';
 export default function Forecast() {
   const [data, setData] = useState(null);
   const [notes, setNotes] = useState({});
-  const [forecastType, setForecastType] = useState('/daily');
+  const [forecastType, setForecastType] = useState('/daily'); 
 
   useEffect(() => {
     alert('Requested data from server...');
