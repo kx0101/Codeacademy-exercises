@@ -5,7 +5,7 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      password: 'swordfish',
+      password: 'swordfish', 
       authorized: false
     };
     this.authorize = this.authorize.bind(this);
