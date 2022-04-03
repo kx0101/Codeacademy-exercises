@@ -4,7 +4,7 @@ import TasksList from "../Presentational/TasksList";
 
 export default function AppFunction() {
   const [newTask, setNewTask] = useState({});
-  const [allTasks, setAllTasks] = useState([]);
+  const [allTasks, setAllTasks] = useState([]); 
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
