@@ -8,7 +8,7 @@ export class Child extends React.Component {
 
   handleChange(e) {
     const name = e.target.value;
-    this.props.onChange(name);
+    this.props.onChange(name); 
   }
 
   render() {
