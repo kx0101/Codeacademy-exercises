@@ -9,7 +9,7 @@ function App() {
   const [birthday, setBirthday] = useState("");
   const [breed, setBreed] = useState("");
   const [toy, setToy] = useState("");
-
+ 
   function confirmPasswordsMatch(props) {
     // check password against confirmation password
     const { nativeEvent: { text } } = props;
