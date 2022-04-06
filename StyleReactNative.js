@@ -9,7 +9,7 @@ const App = () => (
   </View>
 );
 
-export default App;
+export default App; 
 
 export const styles = StyleSheet.create({
   layout: {
