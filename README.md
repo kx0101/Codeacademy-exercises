@@ -2,4 +2,4 @@
 
 ## Codeacademy exercises and projects. Just wanted to keeping track
 
-## Day 5
+## Day 6
