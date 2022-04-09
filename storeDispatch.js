@@ -1,12 +1,11 @@
 import { createStore } from 'redux';
 
-// Create your action creators here.
 const increment = () => {
-  return { type: 'increment' };
+  return { type: 'increment' }
 }
 
 const decrement = () => {
-  return { type: 'decrement' };
+  return { type: 'decrement' }
 }
 
 const initialState = 0;
@@ -23,12 +22,13 @@ const countReducer = (state = initialState, action) => {
 
 const store = createStore(countReducer);
 
-// Modify the dispatches below.
-store.dispatch(increment());
-store.dispatch(increment());
-console.log(store.getState());
+// Define your change listener function here.
+const printCountStatus = () => {
+  console.log(`The count is ${store.getState()}`)
+}
 
-store.dispatch(decrement());
-store.dispatch(decrement());
-store.dispatch(decrement());
-console.log(store.getState());
+store.subscribe(printCountStatus)
+
+store.dispatch(decrement()); // store.getState() === -1
+store.dispatch(increment()); // store.getState() === 0
+store.dispatch(increment()); // store.getState() === 1
