@@ -1,34 +1,61 @@
-import { createStore } from 'redux';
+/* Note to learners: 
+Normally, you would import redux like this:
 
-const increment = () => {
-  return { type: 'increment' }
+  import { createStore } from 'redux';
+
+Due to Codecademy's technical limitations 
+for testing this exercise, we are using 
+`require()`.
+*/
+const { createStore } = require('redux');
+
+// Action Creators
+function increment() { 
+  return {type: 'increment'}
 }
 
-const decrement = () => {
-  return { type: 'decrement' }
+function decrement() { 
+  return {type: 'decrement'}
 }
 
+// Reducer / Store
 const initialState = 0;
 const countReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'increment':
-      return state + 1;
+      return state + 1; 
     case 'decrement':
-      return state - 1;
+      return state - 1; 
     default:
       return state;
   }
-}
-
+};  
 const store = createStore(countReducer);
 
-// Define your change listener function here.
-const printCountStatus = () => {
-  console.log(`The count is ${store.getState()}`)
+// HTML Elements
+const counterElement = document.getElementById('counter');
+const incrementer = document.getElementById('incrementer');
+const decrementer = document.getElementById('decrementer');
+
+// Store State Change Listener
+const render = () => {
+  counterElement.innerHTML = store.getState();
+};
+store.subscribe(render)
+render();
+
+
+// DOM Event Handlers
+const incrementerClicked = () => {
+  store.dispatch(increment())
 }
+incrementer.addEventListener('click', incrementerClicked);
+ 
+const decrementerClicked = () => {
+  store.dispatch(decrement());
+}
+decrementer.addEventListener('click', decrementerClicked);
 
-store.subscribe(printCountStatus)
 
-store.dispatch(decrement()); // store.getState() === -1
-store.dispatch(increment()); // store.getState() === 0
-store.dispatch(increment()); // store.getState() === 1
+
+
