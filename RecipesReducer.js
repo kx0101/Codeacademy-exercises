@@ -9,7 +9,7 @@ const addRecipe = (recipe) => {
     type: 'favoriteRecipes/addRecipe', 
     payload: recipe 
   };
-}
+} 
 
 const removeRecipe = (recipe) => {
   return { 
