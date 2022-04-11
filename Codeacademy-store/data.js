@@ -10,3 +10,4 @@ export const inventoryData = [
 export const currenciesData = ['USD', 'EUR', 'CAD'];
  
  
+ 
