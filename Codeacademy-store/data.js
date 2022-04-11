@@ -11,3 +11,4 @@ export const currenciesData = ['USD', 'EUR', 'CAD'];
  
  
  
+ 
