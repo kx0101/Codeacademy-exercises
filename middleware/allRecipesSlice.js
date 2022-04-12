@@ -11,7 +11,7 @@ export const loadRecipes = createAsyncThunk(
     const json = await data.json();
     return json; 
   }
-);
+); 
 
 const sliceOptions = {
   name: "allRecipes",
