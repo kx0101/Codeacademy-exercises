@@ -5,7 +5,7 @@ import {
 } from "../favoriteRecipes/favoriteRecipesSlice";
 import { selectSearchTerm } from "../search/searchSlice";
 export const loadRecipes = createAsyncThunk(
-  "allRecipes/getAllRecipes",
+  "allRecipes/getAllRecipes", 
   async () => {
     const data = await fetch("api/recipes?limit=10");
     const json = await data.json();
