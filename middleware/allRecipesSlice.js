@@ -9,7 +9,7 @@ export const loadRecipes = createAsyncThunk(
   async () => {
     const data = await fetch("api/recipes?limit=10");
     const json = await data.json();
-    return json;
+    return json; 
   }
 );
 
