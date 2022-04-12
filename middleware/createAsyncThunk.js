@@ -12,7 +12,7 @@ const loadRecipes = createAsyncThunk('allRecipes/loadRecipes',
 
 export const allRecipesSlice = createSlice({
   name: 'allRecipes', 
-  initialState: {
+  initialState: { 
     recipes: [], 
     isLoading: false,
     hasError: false,
