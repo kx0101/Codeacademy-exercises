@@ -2,4 +2,4 @@
 
 ## Codeacademy exercises and projects. Just wanted to keeping track
 
-Finished Javascript 1,2,3
+Finished Javascript 1,2,3 
